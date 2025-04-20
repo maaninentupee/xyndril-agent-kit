@@ -1,0 +1,28 @@
+# XynCrawl agent: scraper_basic.xyn
+# Function: Reads HTML file, extracts <h1> and <p> text, outputs JSON to output/data.json
+# All comments and identifiers in English as per project guidelines
+
+import html
+import json
+
+let html_path = "tests/test-page.html"
+let output_path = "output/data.json"
+
+# Read HTML file
+let html_content = html.read_file(html_path)
+
+# Extract headings and paragraphs
+let headings = html.extract_all(html_content, "h1")
+let paragraphs = html.extract_all(html_content, "p")
+
+# Build JSON structure
+let data = {
+  "headings": headings,
+  "paragraphs": paragraphs
+}
+
+# Write to output file
+json.write_file(output_path, data)
+
+# Print confirmation
+print("Data saved to output/data.json")

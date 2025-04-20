@@ -1,0 +1,11 @@
+Please verify the folder structure and contents of the following two files in the project root `xyndril-agent-kit/`:
+
+1. `start-agent.txt`  
+   - Ensure all referenced paths (e.g. `xyncrawl/tasks.json`, `xyncrawl/src/scraper_basic.py`, `shared/agent-guidelines.md`, `output/data.json`, `raportti.md`) exist or can be created.
+   - Ensure the logic described matches the actual project layout and file availability.
+
+2. `project-structure.txt`  
+   - Confirm that this textual directory tree reflects the real structure of the `xyndril-agent-kit/` directory and its subfolders/files.
+
+Report any mismatches, missing files, or inconsistencies. Do not ask user questions between steps. Perform full validation in one go.
+Instructions for agent operation.

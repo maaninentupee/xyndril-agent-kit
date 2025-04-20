@@ -1,0 +1,29 @@
+# XynHarvester agent: executor.xyn
+# Function: Reads JSON from output/data.json, processes each heading and paragraph, writes results to output/harvested.log
+# All comments and identifiers in English as per project guidelines
+
+import json
+import io
+
+let input_path = "output/data.json"
+let log_path = "output/harvested.log"
+
+# Read the JSON data
+let data = json.read_file(input_path)
+
+# Open log file for writing
+let log = io.open(log_path, "w")
+
+# Process headings
+for heading in data["headings"] {
+  io.write(log, "[HEADING] " + heading + "\n")
+}
+
+# Process paragraphs
+for paragraph in data["paragraphs"] {
+  io.write(log, "[PARAGRAPH] " + paragraph + "\n")
+}
+
+io.close(log)
+
+print("Batch processing complete. Results written to output/harvested.log")

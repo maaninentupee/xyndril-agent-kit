@@ -1,0 +1,68 @@
+
+├── start-agent.txt
+│   📦 Käynnistä projekti: xyndril-agent-kit/
+│   
+│   Lue ensin tiedosto: shared/agent-guidelines.md  
+│   Noudata kaikkia sääntöjä itsenäisestä suorittamisesta ja tiedostorakenteesta.
+│   
+│   Aloita tehtävällä:
+│   - Tiedosto: xyncrawl/tasks.json
+│   - Tehtävä ID: 1
+│   - Kuvaus: Implement a basic web scraper that retrieves structured data from a static test page and stores it in JSON format.
+│   
+│   Tee seuraavat vaiheet:
+│   1. Luo tiedosto `xyncrawl/src/scraper_basic.py`
+│   2. Kirjoita siihen peruswebscraper Xyndril- tai Python-kielellä
+│   3. Tallenna tulokset `output/data.json`
+│   4. Kirjaa raportti `raportti.md`-tiedostoon projektin juuressa
+│   5. Päivitä `status` kenttä `completed` kyseisessä tehtävässä
+│   
+│   Älä kysy käyttäjältä vaiheista, vaan suorita kaikki loogiset vaiheet yhdellä kertaa.  
+│   Kaikki dokumentaatio sijaitsee `docs/`-kansiossa. Käytä vain sitä.
+├── xyncrawl/
+│   ├── src/
+│   │   └── __init__.py
+│   └── tasks.json
+│       [
+│         {
+│           "id": 1,
+│           "description": "Implement a basic web scraper that retrieves structured data from a static test page and stores it in JSON format.",
+│           "status": "pending",
+│           "files": ["src/scraper_basic.py"]
+│         }
+│       ]
+├── xynharvester/
+│   ├── src/
+│   │   └── __init__.py
+│   └── tasks.json
+│       [
+│         {
+│           "id": 1,
+│           "description": "Create the execution logic for batch processing scraped data and managing task queues.",
+│           "status": "pending",
+│           "files": ["src/executor.py"]
+│         }
+│       ]
+├── xynsight/
+│   ├── src/
+│   │   └── __init__.py
+│   └── tasks.json
+│       [
+│         {
+│           "id": 1,
+│           "description": "Develop a module that analyzes collected data using basic heuristics and prints summarized insights.",
+│           "status": "pending",
+│           "files": ["src/insight_generator.py"]
+│         }
+│       ]
+├── shared/
+│   ├── agent-guidelines.md
+│   ├── README-agent.txt
+│   └── ohjeet.txt
+├── docs/
+│   ├── index.md
+│   ├── xyncrawl.md
+│   ├── xynharvester.md
+│   └── xynsight.md
+├── LICENSE
+└── README.md

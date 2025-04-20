@@ -1,0 +1,39 @@
+# XynSight agent: insight_generator.xyn
+# Function: Reads JSON from output/data.json, produces a summary analysis, writes results to output/insights.log
+# All code comments and identifiers in English as per project guidelines
+
+import json
+import io
+
+let input_path = "output/data.json"
+let log_path = "output/insights.log"
+
+# Read the JSON data
+let data = json.read_file(input_path)
+
+# Calculate metrics
+let headings_count = len(data["headings"])
+let paragraphs_count = len(data["paragraphs"])
+let total_chars = 0
+for h in data["headings"] {
+  total_chars = total_chars + len(h)
+}
+for p in data["paragraphs"] {
+  total_chars = total_chars + len(p)
+}
+
+# Build summary
+let summary = "Analysis Summary:\n" +
+  "- Headings: " + str(headings_count) + "\n" +
+  "- Paragraphs: " + str(paragraphs_count) + "\n" +
+  "- Total Characters: " + str(total_chars) + "\n"
+
+# Print to terminal
+print(summary)
+
+# Write to log file
+let log = io.open(log_path, "w")
+io.write(log, summary)
+io.close(log)
+
+print("Insight analysis complete. Results written to output/insights.log")

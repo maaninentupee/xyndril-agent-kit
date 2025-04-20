@@ -1,0 +1,8 @@
+[
+  {
+    "id": 1,
+    "description": "Develop a module that analyzes collected data using basic heuristics and prints summarized insights.",
+    "status": "completed",
+    "files": ["src/insight_generator.py"]
+  }
+]

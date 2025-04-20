@@ -1,0 +1,10 @@
+xyndril-agent-kit/
+├── start-agent.txt
+├── shared/
+├── xyncrawl/
+├── xynharvester/
+├── xynsight/
+├── docs/
+├── LICENSE
+├── README.md
+└── (muut mahdolliset tiedostot kuten raportti.md, output/)

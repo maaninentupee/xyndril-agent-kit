@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "description": "Implement a basic web scraper that retrieves structured data from a static test page and stores it in JSON format.",
+    "status": "completed",
+    "files": ["src/scraper_basic.py"]
+  },
+  {
+    "id": 2,
+    "description": "Rewrite scraper_basic.py in Xyndril language as scraper_basic.xyn. Match logic and output with the Python version.",
+    "status": "completed",
+    "files": ["src/scraper_basic.xyn"]
+  }
+]
